@@ -58,10 +58,41 @@ function toString(choice) {
 }
 
 function playRound(choice) {
+
+    switch (choice) {
+        case 0:
+            humanRock++;
+            break;
+        case 1:
+            humanPaper++;
+            break;
+        case 2:
+            humanScissors++;
+            break;
+        default:
+            alert("thats not supposed to happen");
+            break;
+    }
+
     const computerChoice = getComputerChoice();
 
-    document.getElementById("humanChoice").src = ("../images/" + toString(choice).toLowerCase() + ".png");
-    document.getElementById("computerChoice").src = ("../images/" + toString(computerChoice).toLowerCase() + ".png");
+    switch (computerChoice) {
+        case 0:
+            computerRock++;
+            break;
+        case 1:
+            computerPaper++;
+            break;
+        case 2:
+            computerScissors++;
+            break;
+        default:
+            alert("thats not supposed to happen");
+            break;
+    }
+
+    document.getElementById("humanChoice").src = ("images/" + toString(choice).toLowerCase() + ".png");
+    document.getElementById("computerChoice").src = ("images/" + toString(computerChoice).toLowerCase() + ".png");
 
     
 
