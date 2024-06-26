@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="rps.js"></script> 
+    <link rel="stylesheet"  href="style.css"/>
+</head>
+<body onload="updateStats()">
+    <div class="top">
+        <div class="top header">
+            Rock Paper Scissors
+        </div>
+    </div>
+    <div class="body">
+        <div class="human">
+            <p class="title-text" id="human-title">Choose your move!</p>
+            <div class="images">
+                <ul>
+                    <li>                    
+                        <button type="submit" class="choice" id="rock" onclick="playRound(0)">
+                            <img src="images/rock.png" alt="rock" width="160">
+                        </button>
+                    </li>
+                    <li>
+                        <button type="submit" class="choice" id="paper" onclick="playRound(1)">
+                            <img src="images/paper.png" alt="paper" width="160">
+                        </button>
+                    </li>
+                    <li>
+                        <button type="submit" class="choice" id="scissors" onclick="playRound(2)">
+                            <img src="images/scissors.png" alt="scissors" width="160">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p class="title-text" id="humanScore">
+                    Score: 
+                </p>
+                <p class="title-text" id="humanRock">
+                    Rock: 
+                </p>
+                <p class="title-text" id="humanPaper">
+                    Paper: 
+                </p>
+                <p class="title-text" id="humanScissors">
+                    Scissors: 
+                </p>
+            </div>
+        </div>
+        <div class="play">
+            <img src="images/transparent.png" alt="" width="160" height="160" id="humanChoice">
+            <p class="title-text" id="outcome"></p>
+            <img src="images/transparent.png" alt="" width="160" height="160" id="computerChoice">
+        </div>
+        <div class="computer">
+            <p class="title-text" id="ai-title">AI Choice</p>
+            <div class="images">
+                <ul>
+                    <li><img src="images/rock.png" alt="rock" width="160" id="ai-rock"></li>
+                    <li><img src="images/paper.png" alt="paper" width="160" id="ai-paper"></li>
+                    <li><img src="images/scissors.png" alt="scissors" width="160" id="ai-scissors"></li>
+                </ul>
+            </div>
+            <div class="computerScores">
+                <p class="title-text" id="computerScore">
+                    Score: 
+                </p>
+                <p class="title-text" id="computerRock">
+                    Rock: 
+                </p>
+                <p class="title-text" id="computerPaper">
+                    Paper: 
+                </p>
+                <p class="title-text" id="computerScissors">
+                    Scissors: 
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
